@@ -1,0 +1,5 @@
+version: "1"
+rules:
+  - base: Alpha
+    upstream: MetaCubeX:Alpha    # change `wei` to the owner of upstream repo
+    mergeMethod: hardreset
