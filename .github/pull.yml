@@ -4,11 +4,11 @@ rules:                      # Array of rules
     upstream: MetaCubeX:Alpha    # Required. Must be in the same fork network.
     mergeMethod: merge  # Optional, one of [none, merge, squash, rebase, hardreset], Default: none.
     mergeUnstable: false    # Optional, merge pull request even when the mergeable_state is not clean. Default: false
-    assignees:              # Optional
-      - forest
-    reviewers:              # Optional
-      - forest
-    conflictReviewers:      # Optional, on merge conflict assign a reviewer
-      - forest
-label: ":arrow_heading_down: pull"  # Optional
-conflictLabel: "merge-conflict"     # Optional, on merge conflict assign a custom label, Default: merge-conflict
+    #assignees:              # Optional
+      #- forest
+    #reviewers:              # Optional
+      #- forest
+    #conflictReviewers:      # Optional, on merge conflict assign a reviewer
+      #- forest
+#label: ":arrow_heading_down: pull"  # Optional
+#conflictLabel: "merge-conflict"     # Optional, on merge conflict assign a custom label, Default: merge-conflict
