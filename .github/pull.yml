@@ -3,7 +3,7 @@ rules:                      # Array of rules
   - base: Alpha            # Required. Target branch
     upstream: MetaCubeX:Alpha    # Required. Must be in the same fork network.
     mergeMethod: merge  # Optional, one of [none, merge, squash, rebase, hardreset], Default: none.
-    mergeUnstable: false    # Optional, merge pull request even when the mergeable_state is not clean. Default: false
+    #mergeUnstable: false    # Optional, merge pull request even when the mergeable_state is not clean. Default: false
     #assignees:              # Optional
       #- forest
     #reviewers:              # Optional
