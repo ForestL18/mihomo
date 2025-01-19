@@ -196,6 +196,13 @@ func (ss *ShadowSocks) SupportWithDialer() C.NetWork {
 	return C.ALLNet
 }
 
+// ProxyInfo implements C.ProxyAdapter
+func (ss *ShadowSocks) ProxyInfo() C.ProxyInfo {
+	info := ss.Base.ProxyInfo()
+	info.DialerProxy = ss.option.DialerProxy
+	return info
+}
+
 // ListenPacketOnStreamConn implements C.ProxyAdapter
 func (ss *ShadowSocks) ListenPacketOnStreamConn(ctx context.Context, c net.Conn, metadata *C.Metadata) (_ C.PacketConn, err error) {
 	if ss.option.UDPOverTCP {
@@ -229,7 +236,7 @@ func NewShadowSocks(option ShadowSocksOption) (*ShadowSocks, error) {
 		Password: option.Password,
 	})
 	if err != nil {
-		return nil, fmt.Errorf("ss %s initialize error: %w", addr, err)
+		return nil, fmt.Errorf("ss %s cipher: %s initialize error: %w", addr, option.Cipher, err)
 	}
 
 	var v2rayOption *v2rayObfs.Option

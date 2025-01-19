@@ -84,11 +84,14 @@ func NewFileVehicle(path string) *FileVehicle {
 }
 
 type HTTPVehicle struct {
-	url     string
-	path    string
-	proxy   string
-	header  http.Header
-	timeout time.Duration
+	url       string
+	path      string
+	proxy     string
+	header    http.Header
+	timeout   time.Duration
+	sizeLimit int64
+	inRead    func(response *http.Response)
+	provider  types.ProxyProvider
 }
 
 func (h *HTTPVehicle) Url() string {
@@ -109,6 +112,10 @@ func (h *HTTPVehicle) Proxy() string {
 
 func (h *HTTPVehicle) Write(buf []byte) error {
 	return safeWrite(h.path, buf)
+}
+
+func (h *HTTPVehicle) SetInRead(fn func(response *http.Response)) {
+	h.inRead = fn
 }
 
 func (h *HTTPVehicle) Read(ctx context.Context, oldHash utils.HashType) (buf []byte, hash utils.HashType, err error) {
@@ -133,6 +140,11 @@ func (h *HTTPVehicle) Read(ctx context.Context, oldHash utils.HashType) (buf []b
 		return
 	}
 	defer resp.Body.Close()
+
+	if h.inRead != nil {
+		h.inRead(resp)
+	}
+
 	if resp.StatusCode < 200 || resp.StatusCode > 299 {
 		if setIfNoneMatch && resp.StatusCode == http.StatusNotModified {
 			return nil, oldHash, nil
@@ -140,7 +152,11 @@ func (h *HTTPVehicle) Read(ctx context.Context, oldHash utils.HashType) (buf []b
 		err = errors.New(resp.Status)
 		return
 	}
-	buf, err = io.ReadAll(resp.Body)
+	var reader io.Reader = resp.Body
+	if h.sizeLimit > 0 {
+		reader = io.LimitReader(reader, h.sizeLimit)
+	}
+	buf, err = io.ReadAll(reader)
 	if err != nil {
 		return
 	}
@@ -155,12 +171,13 @@ func (h *HTTPVehicle) Read(ctx context.Context, oldHash utils.HashType) (buf []b
 	return
 }
 
-func NewHTTPVehicle(url string, path string, proxy string, header http.Header, timeout time.Duration) *HTTPVehicle {
+func NewHTTPVehicle(url string, path string, proxy string, header http.Header, timeout time.Duration, sizeLimit int64) *HTTPVehicle {
 	return &HTTPVehicle{
-		url:     url,
-		path:    path,
-		proxy:   proxy,
-		header:  header,
-		timeout: timeout,
+		url:       url,
+		path:      path,
+		proxy:     proxy,
+		header:    header,
+		timeout:   timeout,
+		sizeLimit: sizeLimit,
 	}
 }

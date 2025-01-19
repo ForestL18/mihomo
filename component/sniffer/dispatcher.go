@@ -48,6 +48,10 @@ func (sd *Dispatcher) shouldOverride(metadata *C.Metadata) bool {
 	if metadata.DNSMode == C.DNSMapping && sd.forceDnsMapping {
 		return true
 	}
+	return sd.forceSniff(metadata)
+}
+
+func (sd *Dispatcher) forceSniff(metadata *C.Metadata) bool {
 	for _, matcher := range sd.forceDomain {
 		if matcher.MatchDomain(metadata.Host) {
 			return true
@@ -98,16 +102,21 @@ func (sd *Dispatcher) TCPSniff(conn *N.BufferedConn, metadata *C.Metadata) bool 
 		if !inWhitelist {
 			return false
 		}
+		forceSniffer := sd.forceSniff(metadata)
 
 		dst := metadata.AddrPort()
-		if count, ok := sd.skipList.Get(dst); ok && count > 5 {
-			log.Debugln("[Sniffer] Skip sniffing[%s] due to multiple failures", dst)
-			return false
+		if !forceSniffer {
+			if count, ok := sd.skipList.Get(dst); ok && count > 5 {
+				log.Debugln("[Sniffer] Skip sniffing[%s] due to multiple failures", dst)
+				return false
+			}
 		}
 
 		host, err := sd.sniffDomain(conn, metadata)
 		if err != nil {
-			sd.cacheSniffFailed(metadata)
+			if !forceSniffer {
+				sd.cacheSniffFailed(metadata)
+			}
 			log.Debugln("[Sniffer] All sniffing sniff failed with from [%s:%d] to [%s:%d]", metadata.SrcIP, metadata.SrcPort, metadata.String(), metadata.DstPort)
 			return false
 		}
@@ -145,8 +154,12 @@ func (sd *Dispatcher) Enable() bool {
 }
 
 func (sd *Dispatcher) sniffDomain(conn *N.BufferedConn, metadata *C.Metadata) (string, error) {
+	//defer func(start time.Time) {
+	//	log.Debugln("[Sniffer] [%s] Sniffing took %s", metadata.DstIP, time.Since(start))
+	//}(time.Now())
+
 	for s := range sd.sniffers {
-		if s.SupportNetwork() == C.TCP {
+		if s.SupportNetwork() == C.TCP && s.SupportPort(metadata.DstPort) {
 			_ = conn.SetReadDeadline(time.Now().Add(1 * time.Second))
 			_, err := conn.Peek(1)
 			_ = conn.SetReadDeadline(time.Time{})
@@ -154,7 +167,7 @@ func (sd *Dispatcher) sniffDomain(conn *N.BufferedConn, metadata *C.Metadata) (s
 				_, ok := err.(*net.OpError)
 				if ok {
 					sd.cacheSniffFailed(metadata)
-					log.Errorln("[Sniffer] [%s] may not have any sent data, Consider adding skip", metadata.DstIP.String())
+					log.Errorln("[Sniffer] [%s] [%s] may not have any sent data, Consider adding skip", metadata.DstIP, s.Protocol())
 					_ = conn.Close()
 				}
 
@@ -164,22 +177,36 @@ func (sd *Dispatcher) sniffDomain(conn *N.BufferedConn, metadata *C.Metadata) (s
 			bufferedLen := conn.Buffered()
 			bytes, err := conn.Peek(bufferedLen)
 			if err != nil {
-				log.Debugln("[Sniffer] the data length not enough")
+				log.Debugln("[Sniffer] [%s] [%s] the data length not enough, error: %v", metadata.DstIP, s.Protocol(), err)
 				continue
 			}
 
 			host, err := s.SniffData(bytes)
+			var e *errNeedAtLeastData
+			if errors.As(err, &e) {
+				//log.Debugln("[Sniffer] [%s] [%s] %v, got length: %d", metadata.DstIP, s.Protocol(), e, len(bytes))
+				_ = conn.SetReadDeadline(time.Now().Add(1 * time.Second))
+				bytes, err = conn.Peek(e.length)
+				_ = conn.SetReadDeadline(time.Time{})
+				//log.Debugln("[Sniffer] [%s] [%s] try again, got length: %d", metadata.DstIP, s.Protocol(), len(bytes))
+				if err != nil {
+					log.Debugln("[Sniffer] [%s] [%s] the data length not enough, error: %v", metadata.DstIP, s.Protocol(), err)
+					continue
+				}
+				host, err = s.SniffData(bytes)
+			}
 			if err != nil {
-				//log.Debugln("[Sniffer] [%s] Sniff data failed %s", s.Protocol(), metadata.DstIP)
+				//log.Debugln("[Sniffer] [%s] [%s] Sniff data failed, error: %v", metadata.DstIP, s.Protocol(), err)
 				continue
 			}
 
 			_, err = netip.ParseAddr(host)
 			if err == nil {
-				//log.Debugln("[Sniffer] [%s] Sniff data failed %s", s.Protocol(), metadata.DstIP)
+				//log.Debugln("[Sniffer] [%s] [%s] Sniff data failed, got host [%s]", metadata.DstIP, s.Protocol(), host)
 				continue
 			}
 
+			//log.Debugln("[Sniffer] [%s] [%s] Sniffed [%s]", metadata.DstIP, s.Protocol(), host)
 			return host, nil
 		}
 	}
