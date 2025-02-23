@@ -59,7 +59,7 @@ func ParseProxyGroup(config map[string]any, proxyMap map[string]C.Proxy, provide
 		return nil, errFormat
 	}
 
-	groupName := groupOption.Name
+	groupName := groupOption.Name + "__internal_compatible_provider"
 
 	providers := []types.ProxyProvider{}
 
