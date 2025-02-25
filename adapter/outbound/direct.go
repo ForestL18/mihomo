@@ -3,10 +3,15 @@ package outbound
 import (
 	"context"
 	"errors"
+	"syscall"
+
+	N "github.com/metacubex/mihomo/common/net"
+	"github.com/metacubex/mihomo/common/utils"
 	"github.com/metacubex/mihomo/component/dialer"
 	"github.com/metacubex/mihomo/component/loopback"
 	"github.com/metacubex/mihomo/component/resolver"
 	C "github.com/metacubex/mihomo/constant"
+	"github.com/metacubex/mihomo/log"
 )
 
 type Direct struct {
@@ -37,6 +42,7 @@ func (d *Direct) ListenPacketContext(ctx context.Context, metadata *C.Metadata, 
 	if err := d.loopBack.CheckPacketConn(metadata); err != nil {
 		return nil, err
 	}
+
 	// net.UDPConn.WriteTo only working with *net.UDPAddr, so we need a net.UDPAddr
 	if !metadata.Resolved() {
 		ip, err := resolver.ResolveIPWithResolver(ctx, metadata.Host, resolver.DirectHostResolver)
@@ -44,12 +50,30 @@ func (d *Direct) ListenPacketContext(ctx context.Context, metadata *C.Metadata, 
 			return nil, errors.New("can't resolve ip")
 		}
 		metadata.DstIP = ip
+		log.Debugln("resolve %s from %v, ip: %s", metadata.Host, resolver.DirectHostResolver, ip.String())
 	}
+
 	pc, err := dialer.NewDialer(d.Base.DialOptions(opts...)...).ListenPacket(ctx, "udp", "", metadata.AddrPort())
 	if err != nil {
 		return nil, err
 	}
-	return d.loopBack.NewPacketConn(newPacketConn(pc, d)), nil
+
+	epc := N.NewEnhancePacketConn(pc)
+	if _, ok := pc.(syscall.Conn); !ok {
+		epc = N.NewDeadlineEnhancePacketConn(epc)
+	}
+
+	resolvedIP := metadata.DstIP.String()
+
+	directPacketConn := &packetConn{
+		EnhancePacketConn:       epc,
+		chain:                   []string{d.Name()},
+		adapterName:             d.Name(),
+		connID:                  utils.NewUUIDV4().String(),
+		actualRemoteDestination: resolvedIP,
+	}
+
+	return d.loopBack.NewPacketConn(directPacketConn), nil
 }
 
 func (d *Direct) IsL3Protocol(metadata *C.Metadata) bool {
