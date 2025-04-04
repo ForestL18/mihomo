@@ -24,7 +24,7 @@ import (
 	"github.com/metacubex/mihomo/log"
 	"golang.org/x/exp/constraints"
 
-	tun "github.com/metacubex/sing-tun"
+	tun "github.com/forestl18/sing-tun"
 	"github.com/metacubex/sing/common"
 	"github.com/metacubex/sing/common/control"
 	E "github.com/metacubex/sing/common/exceptions"
