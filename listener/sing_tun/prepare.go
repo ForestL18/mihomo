@@ -9,8 +9,8 @@ import (
 	"github.com/metacubex/mihomo/component/resolver"
 	"github.com/metacubex/mihomo/log"
 
-	tun "github.com/metacubex/sing-tun"
-	"github.com/metacubex/sing-tun/ping"
+	tun "github.com/forestl18/sing-tun"
+	"github.com/forestl18/sing-tun/ping"
 	M "github.com/metacubex/sing/common/metadata"
 	N "github.com/metacubex/sing/common/network"
 )
