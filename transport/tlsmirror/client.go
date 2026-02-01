@@ -6,8 +6,8 @@ import (
 	"net"
 	"sync"
 
-	"github.com/metacubex/mihomo/component/ca"
-	tlsC "github.com/metacubex/mihomo/component/tls"
+	"github.com/forestl18/mihomo/component/ca"
+	tlsC "github.com/forestl18/mihomo/component/tls"
 
 	"github.com/metacubex/tls"
 )

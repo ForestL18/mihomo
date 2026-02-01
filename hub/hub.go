@@ -1,10 +1,10 @@
 package hub
 
 import (
-	"github.com/metacubex/mihomo/config"
-	"github.com/metacubex/mihomo/hub/executor"
-	"github.com/metacubex/mihomo/hub/route"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/config"
+	"github.com/forestl18/mihomo/hub/executor"
+	"github.com/forestl18/mihomo/hub/route"
+	"github.com/forestl18/mihomo/log"
 )
 
 type Option func(*config.Config)

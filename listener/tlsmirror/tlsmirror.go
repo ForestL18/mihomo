@@ -6,11 +6,11 @@ import (
 	"runtime/debug"
 	"strings"
 
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/listener/inner"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/transport/tlsmirror"
+	N "github.com/forestl18/mihomo/common/net"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/listener/inner"
+	"github.com/forestl18/mihomo/log"
+	"github.com/forestl18/mihomo/transport/tlsmirror"
 )
 
 type Config struct {

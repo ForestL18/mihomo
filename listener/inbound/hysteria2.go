@@ -3,10 +3,10 @@ package inbound
 import (
 	"strings"
 
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/sing_hysteria2"
-	"github.com/metacubex/mihomo/log"
+	C "github.com/forestl18/mihomo/constant"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/listener/sing_hysteria2"
+	"github.com/forestl18/mihomo/log"
 )
 
 type Hysteria2Option struct {

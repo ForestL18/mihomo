@@ -12,10 +12,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/metacubex/mihomo/common/atomic"
-	"github.com/metacubex/mihomo/component/keepalive"
-	"github.com/metacubex/mihomo/component/mptcp"
-	"github.com/metacubex/mihomo/component/resolver"
+	"github.com/forestl18/mihomo/common/atomic"
+	"github.com/forestl18/mihomo/component/keepalive"
+	"github.com/forestl18/mihomo/component/mptcp"
+	"github.com/forestl18/mihomo/component/resolver"
 )
 
 const (

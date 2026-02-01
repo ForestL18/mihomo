@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/metacubex/mihomo/component/updater"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/component/updater"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/metacubex/chi"
 	"github.com/metacubex/chi/render"

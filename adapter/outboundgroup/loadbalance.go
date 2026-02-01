@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/common/callback"
-	"github.com/metacubex/mihomo/common/lru"
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
+	"github.com/forestl18/mihomo/common/callback"
+	"github.com/forestl18/mihomo/common/lru"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/common/utils"
+	C "github.com/forestl18/mihomo/constant"
+	P "github.com/forestl18/mihomo/constant/provider"
 
 	"golang.org/x/net/publicsuffix"
 )

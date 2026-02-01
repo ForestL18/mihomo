@@ -13,9 +13,9 @@ import (
 	"testing"
 	"time"
 
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/constant/sniffer"
+	N "github.com/forestl18/mihomo/common/net"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/constant/sniffer"
 
 	"github.com/stretchr/testify/assert"
 )

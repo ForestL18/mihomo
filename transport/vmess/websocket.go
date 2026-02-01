@@ -16,11 +16,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/buf"
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/component/ech"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/common/buf"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/component/ech"
+	tlsC "github.com/forestl18/mihomo/component/tls"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/gobwas/ws"
 	"github.com/gobwas/ws/wsutil"

@@ -4,10 +4,10 @@ import (
 	"errors"
 	"strings"
 
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/sing_shadowsocks"
-	"github.com/metacubex/mihomo/log"
+	C "github.com/forestl18/mihomo/constant"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/listener/sing_shadowsocks"
+	"github.com/forestl18/mihomo/log"
 )
 
 type ShadowSocksOption struct {

@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/metacubex/mihomo/common/structure"
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/component/resource"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
+	"github.com/forestl18/mihomo/common/structure"
+	"github.com/forestl18/mihomo/common/utils"
+	"github.com/forestl18/mihomo/component/resource"
+	C "github.com/forestl18/mihomo/constant"
+	P "github.com/forestl18/mihomo/constant/provider"
 )
 
 var (

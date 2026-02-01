@@ -3,9 +3,9 @@ package route
 import (
 	"context"
 
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/tunnel"
+	C "github.com/forestl18/mihomo/constant"
+	P "github.com/forestl18/mihomo/constant/provider"
+	"github.com/forestl18/mihomo/tunnel"
 
 	"github.com/metacubex/chi"
 	"github.com/metacubex/chi/render"

@@ -5,8 +5,8 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/metacubex/mihomo/component/ech"
-	"github.com/metacubex/mihomo/component/resolver"
+	"github.com/forestl18/mihomo/component/ech"
+	"github.com/forestl18/mihomo/component/resolver"
 )
 
 type ECHOptions struct {

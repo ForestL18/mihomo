@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/metacubex/mihomo/transport/shadowsocks/shadowaead"
+	"github.com/forestl18/mihomo/transport/shadowsocks/shadowaead"
 
 	"github.com/stretchr/testify/require"
 )

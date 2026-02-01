@@ -1,7 +1,7 @@
 package cachefile
 
 import (
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/metacubex/bbolt"
 )

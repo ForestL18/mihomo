@@ -4,7 +4,7 @@ import (
 	"io"
 	"math"
 
-	"github.com/metacubex/mihomo/common/pool"
+	"github.com/forestl18/mihomo/common/pool"
 )
 
 const (

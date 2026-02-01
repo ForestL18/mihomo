@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"strings"
 
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/pool"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/transport/ssr/tools"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/common/pool"
+	"github.com/forestl18/mihomo/log"
+	"github.com/forestl18/mihomo/transport/ssr/tools"
 
 	"github.com/metacubex/randv2"
 )

@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/component/slowdown"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/common/utils"
+	"github.com/forestl18/mihomo/component/slowdown"
+	P "github.com/forestl18/mihomo/constant/provider"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/metacubex/fswatch"
 	"github.com/samber/lo"

@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/common/utils"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/gofrs/uuid/v5"
 	mux "github.com/metacubex/sing-mux"

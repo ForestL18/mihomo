@@ -7,9 +7,9 @@ import (
 	"net/netip"
 	"strings"
 
-	"github.com/metacubex/mihomo/component/dialer"
-	"github.com/metacubex/mihomo/component/resolver"
-	C "github.com/metacubex/mihomo/constant"
+	"github.com/forestl18/mihomo/component/dialer"
+	"github.com/forestl18/mihomo/component/resolver"
+	C "github.com/forestl18/mihomo/constant"
 
 	"github.com/easytier/easytier/easytier-go/platform"
 	D "github.com/miekg/dns"

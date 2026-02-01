@@ -8,11 +8,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/tuic"
-	"github.com/metacubex/mihomo/transport/tuic/common"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/component/ech"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/transport/tuic"
+	"github.com/forestl18/mihomo/transport/tuic/common"
 
 	"github.com/gofrs/uuid/v5"
 	"github.com/metacubex/quic-go"

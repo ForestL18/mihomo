@@ -15,7 +15,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/metacubex/mihomo/common/contextutils"
+	"github.com/forestl18/mihomo/common/contextutils"
 	"github.com/metacubex/tls"
 	"golang.org/x/sync/semaphore"
 )
