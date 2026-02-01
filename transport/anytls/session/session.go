@@ -12,11 +12,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/metacubex/mihomo/common/buf"
-	"github.com/metacubex/mihomo/common/pool"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/transport/anytls/padding"
-	"github.com/metacubex/mihomo/transport/anytls/util"
+	"github.com/forestl18/mihomo/common/buf"
+	"github.com/forestl18/mihomo/common/pool"
+	"github.com/forestl18/mihomo/log"
+	"github.com/forestl18/mihomo/transport/anytls/padding"
+	"github.com/forestl18/mihomo/transport/anytls/util"
 )
 
 type Session struct {

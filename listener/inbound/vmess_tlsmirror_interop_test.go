@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/metacubex/mihomo/adapter/outbound"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/listener/inbound"
-	"github.com/metacubex/mihomo/transport/tlsmirror"
+	"github.com/forestl18/mihomo/adapter/outbound"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/listener/inbound"
+	"github.com/forestl18/mihomo/transport/tlsmirror"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/tls"

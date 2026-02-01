@@ -9,13 +9,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/atomic"
-	"github.com/metacubex/mihomo/common/queue"
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/common/xsync"
-	"github.com/metacubex/mihomo/component/ca"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/common/atomic"
+	"github.com/forestl18/mihomo/common/queue"
+	"github.com/forestl18/mihomo/common/utils"
+	"github.com/forestl18/mihomo/common/xsync"
+	"github.com/forestl18/mihomo/component/ca"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/metacubex/http"
 )
