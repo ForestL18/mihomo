@@ -5,11 +5,11 @@ import (
 	"net/netip"
 	"testing"
 
-	"github.com/metacubex/mihomo/adapter/outbound"
-	"github.com/metacubex/mihomo/listener/inbound"
-	"github.com/metacubex/mihomo/transport/jls"
-	"github.com/metacubex/mihomo/transport/restls"
-	"github.com/metacubex/mihomo/transport/shadowtls"
+	"github.com/forestl18/mihomo/adapter/outbound"
+	"github.com/forestl18/mihomo/listener/inbound"
+	"github.com/forestl18/mihomo/transport/jls"
+	"github.com/forestl18/mihomo/transport/restls"
+	"github.com/forestl18/mihomo/transport/shadowtls"
 
 	"github.com/stretchr/testify/assert"
 )

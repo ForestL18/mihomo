@@ -1,6 +1,6 @@
 package sniffer
 
-import "github.com/metacubex/mihomo/constant"
+import "github.com/forestl18/mihomo/constant"
 
 type Sniffer interface {
 	SupportNetwork() constant.NetWork

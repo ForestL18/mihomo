@@ -12,7 +12,7 @@ on:
       - "v*"
 
 jobs:
-  # Send "core-updated" to MetaCubeX/ClashMetaForAndroid to trigger update-dependencies
+  # Send "core-updated" to ForestL18/ClashMetaForAndroid to trigger update-dependencies
   trigger-CMFA-update:
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +25,7 @@ jobs:
       
       - name: Trigger update-dependencies
         run: |
-          curl -X POST https://api.github.com/repos/MetaCubeX/ClashMetaForAndroid/dispatches \
+          curl -X POST https://api.github.com/repos/ForestL18/ClashMetaForAndroid/dispatches \
             -H "Accept: application/vnd.github.everest-preview+json" \
             -H "Authorization: token ${{ steps.generate-token.outputs.token }}" \
             -d '{"event_type": "core-updated"}'

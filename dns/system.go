@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/component/resolver"
+	"github.com/forestl18/mihomo/component/resolver"
 
 	D "github.com/miekg/dns"
 )

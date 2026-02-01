@@ -5,7 +5,7 @@ import (
 	"errors"
 	"net"
 
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/transport/socks5"
 
 	"github.com/metacubex/mhurl"
 )

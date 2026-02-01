@@ -4,7 +4,7 @@ import (
 	"context"
 	"net"
 
-	"github.com/metacubex/mihomo/common/contextutils"
+	"github.com/forestl18/mihomo/common/contextutils"
 )
 
 // SetupContextForConn is a helper function that starts connection I/O interrupter.

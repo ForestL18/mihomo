@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/component/resolver"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/listener/sing"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/component/resolver"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/listener/sing"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/metacubex/sing/common/buf"
 	"github.com/metacubex/sing/common/bufio"

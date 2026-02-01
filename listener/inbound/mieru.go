@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/listener/mieru"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	"github.com/forestl18/mihomo/common/utils"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/listener/mieru"
+	"github.com/forestl18/mihomo/log"
 	"google.golang.org/protobuf/proto"
 
 	mieruserver "github.com/enfein/mieru/v3/apis/server"

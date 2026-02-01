@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/metacubex/mihomo/common/once"
-	"github.com/metacubex/mihomo/constant/features"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/ntp"
+	"github.com/forestl18/mihomo/common/once"
+	"github.com/forestl18/mihomo/constant/features"
+	"github.com/forestl18/mihomo/log"
+	"github.com/forestl18/mihomo/ntp"
 
 	"github.com/metacubex/tls"
 )

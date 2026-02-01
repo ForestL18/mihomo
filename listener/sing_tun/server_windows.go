@@ -3,8 +3,8 @@ package sing_tun
 import (
 	"time"
 
-	"github.com/metacubex/mihomo/constant/features"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/constant/features"
+	"github.com/forestl18/mihomo/log"
 
 	tun "github.com/forestl18/sing-tun"
 )

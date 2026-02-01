@@ -9,10 +9,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/transport/hysteria/obfs"
-	"github.com/metacubex/mihomo/transport/hysteria/pmtud_fix"
-	"github.com/metacubex/mihomo/transport/hysteria/transport"
-	"github.com/metacubex/mihomo/transport/hysteria/utils"
+	"github.com/forestl18/mihomo/transport/hysteria/obfs"
+	"github.com/forestl18/mihomo/transport/hysteria/pmtud_fix"
+	"github.com/forestl18/mihomo/transport/hysteria/transport"
+	"github.com/forestl18/mihomo/transport/hysteria/utils"
 
 	"github.com/metacubex/quic-go"
 	"github.com/metacubex/quic-go/congestion"

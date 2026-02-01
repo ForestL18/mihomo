@@ -1,7 +1,7 @@
 package ca
 
 import (
-	"github.com/metacubex/mihomo/constant/features"
+	"github.com/forestl18/mihomo/constant/features"
 )
 
 func init() {

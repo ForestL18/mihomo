@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/component/ca"
+	"github.com/forestl18/mihomo/component/ca"
 )
 
 const (

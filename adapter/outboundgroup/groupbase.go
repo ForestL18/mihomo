@@ -8,12 +8,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/adapter/outbound"
-	"github.com/metacubex/mihomo/common/atomic"
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/adapter/outbound"
+	"github.com/forestl18/mihomo/common/atomic"
+	"github.com/forestl18/mihomo/common/utils"
+	C "github.com/forestl18/mihomo/constant"
+	P "github.com/forestl18/mihomo/constant/provider"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/dlclark/regexp2"
 	"golang.org/x/exp/slices"

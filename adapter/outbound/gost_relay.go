@@ -6,8 +6,8 @@ import (
 	"net"
 	"strconv"
 
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/gost"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/transport/gost"
 )
 
 type GostRelay struct {

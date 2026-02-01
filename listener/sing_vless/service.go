@@ -8,9 +8,9 @@ import (
 	"io"
 	"net"
 
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/transport/vless"
-	"github.com/metacubex/mihomo/transport/vless/vision"
+	"github.com/forestl18/mihomo/common/utils"
+	"github.com/forestl18/mihomo/transport/vless"
+	"github.com/forestl18/mihomo/transport/vless/vision"
 
 	"github.com/gofrs/uuid/v5"
 	"github.com/metacubex/sing-vmess"
