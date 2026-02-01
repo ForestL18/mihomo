@@ -19,7 +19,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/metacubex/mihomo/component/ca"
+	"github.com/forestl18/mihomo/component/ca"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/http/httputil"

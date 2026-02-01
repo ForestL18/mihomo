@@ -14,11 +14,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/component/ca"
-	mihomoHttp "github.com/metacubex/mihomo/component/http"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/constant/features"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/component/ca"
+	mihomoHttp "github.com/forestl18/mihomo/component/http"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/constant/features"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/metacubex/http"
 )
@@ -27,8 +27,8 @@ const (
 	baseReleaseURL    = "https://github.com/MetaCubeX/mihomo/releases/latest/download/"
 	versionReleaseURL = "https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt"
 
-	baseAlphaURL    = "https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/"
-	versionAlphaURL = "https://github.com/MetaCubeX/mihomo/releases/download/Prerelease-Alpha/version.txt"
+	baseAlphaURL    = "https://github.com/ForestL18/mihomo/releases/download/Prerelease-beta/"
+	versionAlphaURL = "https://github.com/ForestL18/mihomo/releases/download/Prerelease-beta/version.txt"
 
 	// MaxPackageFileSize is a maximum package file length in bytes. The largest
 	// package whose size is limited by this constant currently has the size of
@@ -38,7 +38,7 @@ const (
 
 const (
 	ReleaseChannel = "release"
-	AlphaChannel   = "alpha"
+	AlphaChannel   = "beta"
 )
 
 // CoreUpdater is the mihomo updater.
@@ -95,7 +95,7 @@ func (u *CoreUpdater) Update(currentExePath string, channel string, force bool) 
 	case AlphaChannel:
 		break
 	default: // auto
-		if !strings.HasPrefix(C.Version, "alpha") {
+		if !strings.HasPrefix(C.Version, "beta") {
 			baseURL = baseReleaseURL
 			versionURL = versionReleaseURL
 		}

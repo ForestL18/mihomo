@@ -3,8 +3,8 @@ package convert_test
 import (
 	"testing"
 
-	"github.com/metacubex/mihomo/adapter"
-	. "github.com/metacubex/mihomo/common/convert"
+	"github.com/forestl18/mihomo/adapter"
+	. "github.com/forestl18/mihomo/common/convert"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -5,8 +5,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/metacubex/mihomo/common/atomic"
-	"github.com/metacubex/mihomo/common/utils"
+	"github.com/forestl18/mihomo/common/atomic"
+	"github.com/forestl18/mihomo/common/utils"
 )
 
 var (

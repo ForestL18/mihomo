@@ -5,9 +5,9 @@ import (
 	"errors"
 	"net"
 
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	tlsC "github.com/metacubex/mihomo/component/tls"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/component/ech"
+	tlsC "github.com/forestl18/mihomo/component/tls"
 
 	"github.com/metacubex/tls"
 )

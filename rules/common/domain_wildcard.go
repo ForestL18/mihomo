@@ -3,8 +3,8 @@ package common
 import (
 	"strings"
 
-	"github.com/metacubex/mihomo/component/wildcard"
-	C "github.com/metacubex/mihomo/constant"
+	"github.com/forestl18/mihomo/component/wildcard"
+	C "github.com/forestl18/mihomo/constant"
 )
 
 type DomainWildcard struct {

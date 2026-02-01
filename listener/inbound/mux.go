@@ -1,6 +1,6 @@
 package inbound
 
-import "github.com/metacubex/mihomo/listener/sing"
+import "github.com/forestl18/mihomo/listener/sing"
 
 type MuxOption struct {
 	Padding bool          `inbound:"padding,omitempty"`

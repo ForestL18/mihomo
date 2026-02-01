@@ -11,35 +11,35 @@ import (
 	"time"
 	_ "unsafe"
 
-	"github.com/metacubex/mihomo/adapter"
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/adapter/outboundgroup"
-	"github.com/metacubex/mihomo/component/auth"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/dialer"
-	"github.com/metacubex/mihomo/component/geodata"
-	mihomoHttp "github.com/metacubex/mihomo/component/http"
-	"github.com/metacubex/mihomo/component/iface"
-	"github.com/metacubex/mihomo/component/keepalive"
-	"github.com/metacubex/mihomo/component/profile"
-	"github.com/metacubex/mihomo/component/profile/cachefile"
-	"github.com/metacubex/mihomo/component/resolver"
-	"github.com/metacubex/mihomo/component/resource"
-	"github.com/metacubex/mihomo/component/sniffer"
-	"github.com/metacubex/mihomo/component/trie"
-	"github.com/metacubex/mihomo/component/updater"
-	"github.com/metacubex/mihomo/config"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/dns"
-	"github.com/metacubex/mihomo/listener"
-	authStore "github.com/metacubex/mihomo/listener/auth"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/inner"
-	"github.com/metacubex/mihomo/listener/tproxy"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/ntp/ntp"
-	"github.com/metacubex/mihomo/tunnel"
+	"github.com/forestl18/mihomo/adapter"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	"github.com/forestl18/mihomo/adapter/outboundgroup"
+	"github.com/forestl18/mihomo/component/auth"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/component/dialer"
+	"github.com/forestl18/mihomo/component/geodata"
+	mihomoHttp "github.com/forestl18/mihomo/component/http"
+	"github.com/forestl18/mihomo/component/iface"
+	"github.com/forestl18/mihomo/component/keepalive"
+	"github.com/forestl18/mihomo/component/profile"
+	"github.com/forestl18/mihomo/component/profile/cachefile"
+	"github.com/forestl18/mihomo/component/resolver"
+	"github.com/forestl18/mihomo/component/resource"
+	"github.com/forestl18/mihomo/component/sniffer"
+	"github.com/forestl18/mihomo/component/trie"
+	"github.com/forestl18/mihomo/component/updater"
+	"github.com/forestl18/mihomo/config"
+	C "github.com/forestl18/mihomo/constant"
+	P "github.com/forestl18/mihomo/constant/provider"
+	"github.com/forestl18/mihomo/dns"
+	"github.com/forestl18/mihomo/listener"
+	authStore "github.com/forestl18/mihomo/listener/auth"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/listener/inner"
+	"github.com/forestl18/mihomo/listener/tproxy"
+	"github.com/forestl18/mihomo/log"
+	"github.com/forestl18/mihomo/ntp/ntp"
+	"github.com/forestl18/mihomo/tunnel"
 )
 
 var mux sync.Mutex
@@ -378,7 +378,7 @@ func updateUpdater(cfg *config.Config) {
 	updater.DefaultUiUpdater.AutoDownloadUI()
 }
 
-//go:linkname temporaryUpdateGeneral github.com/metacubex/mihomo/config.temporaryUpdateGeneral
+//go:linkname temporaryUpdateGeneral github.com/forestl18/mihomo/config.temporaryUpdateGeneral
 func temporaryUpdateGeneral(general *config.General) func() {
 	oldGeneral := GetGeneral()
 	updateGeneral(general, false)

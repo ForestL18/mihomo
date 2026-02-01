@@ -3,7 +3,7 @@ package config
 import (
 	"encoding/json"
 
-	"github.com/metacubex/mihomo/listener/sing"
+	"github.com/forestl18/mihomo/listener/sing"
 )
 
 // SudokuServer describes a Sudoku inbound server configuration.

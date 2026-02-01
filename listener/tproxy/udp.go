@@ -4,10 +4,10 @@ import (
 	"net"
 	"net/netip"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/common/pool"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	"github.com/forestl18/mihomo/common/pool"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/transport/socks5"
 
 	"golang.org/x/exp/slices"
 )

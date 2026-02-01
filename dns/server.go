@@ -4,10 +4,10 @@ import (
 	"context"
 	"net"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/common/sockopt"
-	"github.com/metacubex/mihomo/component/resolver"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	"github.com/forestl18/mihomo/common/sockopt"
+	"github.com/forestl18/mihomo/component/resolver"
+	"github.com/forestl18/mihomo/log"
 
 	D "github.com/miekg/dns"
 )

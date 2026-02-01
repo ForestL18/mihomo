@@ -3,7 +3,7 @@ package trie
 import (
 	"net"
 
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/log"
 )
 
 type IPV6 bool

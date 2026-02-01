@@ -11,11 +11,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/metacubex/mihomo/common/httputils"
-	"github.com/metacubex/mihomo/common/once"
-	"github.com/metacubex/mihomo/component/dialer"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/vmess"
+	"github.com/forestl18/mihomo/common/httputils"
+	"github.com/forestl18/mihomo/common/once"
+	"github.com/forestl18/mihomo/component/dialer"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/transport/vmess"
 
 	"github.com/metacubex/http"
 	"golang.org/x/exp/slices"

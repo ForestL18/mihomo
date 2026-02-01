@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/common/pool"
+	"github.com/forestl18/mihomo/common/pool"
 )
 
 type PacketIO interface {

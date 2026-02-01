@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/component/pool"
-	"github.com/metacubex/mihomo/transport/shadowsocks/shadowaead"
+	"github.com/forestl18/mihomo/component/pool"
+	"github.com/forestl18/mihomo/transport/shadowsocks/shadowaead"
 )
 
 type Pool struct {

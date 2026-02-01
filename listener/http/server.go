@@ -4,14 +4,14 @@ import (
 	"errors"
 	"net"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	C "github.com/metacubex/mihomo/constant"
-	authStore "github.com/metacubex/mihomo/listener/auth"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/reality"
-	"github.com/metacubex/mihomo/ntp"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/component/ech"
+	C "github.com/forestl18/mihomo/constant"
+	authStore "github.com/forestl18/mihomo/listener/auth"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/listener/reality"
+	"github.com/forestl18/mihomo/ntp"
 
 	"github.com/metacubex/tls"
 )
