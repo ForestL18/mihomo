@@ -5,12 +5,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/lru"
-	"github.com/metacubex/mihomo/component/fakeip"
-	"github.com/metacubex/mihomo/component/resolver"
-	C "github.com/metacubex/mihomo/constant"
-	icontext "github.com/metacubex/mihomo/context"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/common/lru"
+	"github.com/forestl18/mihomo/component/fakeip"
+	"github.com/forestl18/mihomo/component/resolver"
+	C "github.com/forestl18/mihomo/constant"
+	icontext "github.com/forestl18/mihomo/context"
+	"github.com/forestl18/mihomo/log"
 
 	D "github.com/miekg/dns"
 )

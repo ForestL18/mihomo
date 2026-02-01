@@ -14,7 +14,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/metacubex/mihomo/common/pool"
+	"github.com/forestl18/mihomo/common/pool"
 
 	"golang.org/x/crypto/chacha20poly1305"
 )

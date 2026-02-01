@@ -1,10 +1,10 @@
 package common
 
 import (
-	"github.com/metacubex/mihomo/component/geodata"
-	"github.com/metacubex/mihomo/component/mmdb"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/component/geodata"
+	"github.com/forestl18/mihomo/component/mmdb"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/log"
 )
 
 type ASN struct {

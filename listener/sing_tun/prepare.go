@@ -5,9 +5,9 @@ import (
 	"net/netip"
 	"time"
 
-	"github.com/metacubex/mihomo/component/dialer"
-	"github.com/metacubex/mihomo/component/resolver"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/component/dialer"
+	"github.com/forestl18/mihomo/component/resolver"
+	"github.com/forestl18/mihomo/log"
 
 	tun "github.com/forestl18/sing-tun"
 	"github.com/forestl18/sing-tun/ping"

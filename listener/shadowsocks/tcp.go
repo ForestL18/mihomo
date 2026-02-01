@@ -6,17 +6,17 @@ import (
 	"net"
 	"strings"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/jls"
-	"github.com/metacubex/mihomo/listener/restls"
-	"github.com/metacubex/mihomo/listener/shadowtls"
-	"github.com/metacubex/mihomo/listener/sing"
-	"github.com/metacubex/mihomo/transport/shadowsocks/core"
-	obfs "github.com/metacubex/mihomo/transport/simple-obfs"
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	N "github.com/forestl18/mihomo/common/net"
+	C "github.com/forestl18/mihomo/constant"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/listener/jls"
+	"github.com/forestl18/mihomo/listener/restls"
+	"github.com/forestl18/mihomo/listener/shadowtls"
+	"github.com/forestl18/mihomo/listener/sing"
+	"github.com/forestl18/mihomo/transport/shadowsocks/core"
+	obfs "github.com/forestl18/mihomo/transport/simple-obfs"
+	"github.com/forestl18/mihomo/transport/socks5"
 )
 
 type Listener struct {

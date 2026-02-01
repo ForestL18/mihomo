@@ -7,14 +7,14 @@ import (
 	"net"
 	"strconv"
 
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/shadowsocks/core"
-	"github.com/metacubex/mihomo/transport/shadowsocks/shadowaead"
-	"github.com/metacubex/mihomo/transport/shadowsocks/shadowstream"
-	"github.com/metacubex/mihomo/transport/socks5"
-	"github.com/metacubex/mihomo/transport/ssr/obfs"
-	"github.com/metacubex/mihomo/transport/ssr/protocol"
+	N "github.com/forestl18/mihomo/common/net"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/transport/shadowsocks/core"
+	"github.com/forestl18/mihomo/transport/shadowsocks/shadowaead"
+	"github.com/forestl18/mihomo/transport/shadowsocks/shadowstream"
+	"github.com/forestl18/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/transport/ssr/obfs"
+	"github.com/forestl18/mihomo/transport/ssr/protocol"
 )
 
 type ShadowSocksR struct {
@@ -108,7 +108,7 @@ func (ssr *ShadowSocksR) ProxyInfo() C.ProxyInfo {
 
 func NewShadowSocksR(option ShadowSocksROption) (*ShadowSocksR, error) {
 	// SSR protocol compatibility
-	// https://github.com/metacubex/mihomo/pull/2056
+	// https://github.com/forestl18/mihomo/pull/2056
 	if option.Cipher == "none" {
 		option.Cipher = "dummy"
 	}

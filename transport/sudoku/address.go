@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/transport/socks5"
 )
 
 // EncodeAddress returns the SOCKS5 encoding of rawAddr ("host:port").

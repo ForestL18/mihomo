@@ -6,11 +6,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/common/atomic"
-	"github.com/metacubex/mihomo/common/singledo"
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/common/atomic"
+	"github.com/forestl18/mihomo/common/singledo"
+	"github.com/forestl18/mihomo/common/utils"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/dlclark/regexp2"
 	"golang.org/x/sync/errgroup"

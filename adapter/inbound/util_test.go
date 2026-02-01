@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/transport/socks5"
 )
 
 func TestParseSocksAddrDomainLengths(t *testing.T) {
