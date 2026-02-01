@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/constant/features"
+	"github.com/forestl18/mihomo/common/utils"
+	"github.com/forestl18/mihomo/constant/features"
 )
 
 const Name = "mihomo"

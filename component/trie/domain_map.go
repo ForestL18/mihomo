@@ -4,7 +4,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/metacubex/mihomo/common/utils"
+	"github.com/forestl18/mihomo/common/utils"
 	"github.com/openacid/low/bitmap"
 )
 

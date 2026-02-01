@@ -5,13 +5,13 @@ import (
 	"errors"
 	"net"
 
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/ech"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	"github.com/metacubex/mihomo/transport/jls"
-	"github.com/metacubex/mihomo/transport/restls"
-	"github.com/metacubex/mihomo/transport/shadowtls"
-	"github.com/metacubex/mihomo/transport/tlsmirror"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/component/ech"
+	tlsC "github.com/forestl18/mihomo/component/tls"
+	"github.com/forestl18/mihomo/transport/jls"
+	"github.com/forestl18/mihomo/transport/restls"
+	"github.com/forestl18/mihomo/transport/shadowtls"
+	"github.com/forestl18/mihomo/transport/tlsmirror"
 
 	"github.com/metacubex/tls"
 )

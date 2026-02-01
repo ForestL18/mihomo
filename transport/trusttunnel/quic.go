@@ -6,8 +6,8 @@ import (
 	"net"
 	"runtime"
 
-	"github.com/metacubex/mihomo/transport/tuic/common"
-	"github.com/metacubex/mihomo/transport/vmess"
+	"github.com/forestl18/mihomo/transport/tuic/common"
+	"github.com/forestl18/mihomo/transport/vmess"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/quic-go"

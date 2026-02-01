@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/metacubex/mihomo/common/singleflight"
-	"github.com/metacubex/mihomo/component/geodata/router"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/common/singleflight"
+	"github.com/forestl18/mihomo/component/geodata/router"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/log"
 )
 
 var (

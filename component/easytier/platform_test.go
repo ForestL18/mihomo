@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/metacubex/mihomo/component/resolver"
+	"github.com/forestl18/mihomo/component/resolver"
 
 	"github.com/easytier/easytier/easytier-go/platform"
 	D "github.com/miekg/dns"

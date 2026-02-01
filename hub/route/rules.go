@@ -3,8 +3,8 @@ package route
 import (
 	"time"
 
-	"github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/tunnel"
+	"github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/tunnel"
 
 	"github.com/metacubex/chi"
 	"github.com/metacubex/chi/render"

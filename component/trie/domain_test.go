@@ -5,7 +5,7 @@ import (
 	"net/netip"
 	"testing"
 
-	"github.com/metacubex/mihomo/component/trie"
+	"github.com/forestl18/mihomo/component/trie"
 	"github.com/stretchr/testify/assert"
 )
 

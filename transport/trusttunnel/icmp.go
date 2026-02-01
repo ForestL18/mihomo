@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"net/netip"
 
-	"github.com/metacubex/mihomo/common/buf"
+	"github.com/forestl18/mihomo/common/buf"
 )
 
 type IcmpConn struct {

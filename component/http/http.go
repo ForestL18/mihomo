@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/component/dialer"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/listener/inner"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/component/dialer"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/listener/inner"
 
 	"github.com/metacubex/http"
 )

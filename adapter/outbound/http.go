@@ -9,9 +9,9 @@ import (
 	"net"
 	"strconv"
 
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/component/ca"
-	C "github.com/metacubex/mihomo/constant"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/component/ca"
+	C "github.com/forestl18/mihomo/constant"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/tls"

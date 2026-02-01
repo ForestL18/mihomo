@@ -7,7 +7,7 @@ import (
 	"io"
 	"net"
 
-	"github.com/metacubex/mihomo/common/pool"
+	"github.com/forestl18/mihomo/common/pool"
 )
 
 const (

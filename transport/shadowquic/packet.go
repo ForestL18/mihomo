@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/common/net/deadline"
+	"github.com/forestl18/mihomo/common/net/deadline"
 
 	"github.com/metacubex/jls-quic-go"
 )
