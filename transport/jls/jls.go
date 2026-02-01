@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/ntp"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/ntp"
 
 	tls "github.com/metacubex/jls-tls"
 )

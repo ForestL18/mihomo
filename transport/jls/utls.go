@@ -13,9 +13,9 @@ import (
 	"net"
 	"strings"
 
-	"github.com/metacubex/mihomo/component/ca"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	"github.com/metacubex/mihomo/ntp"
+	"github.com/forestl18/mihomo/component/ca"
+	tlsC "github.com/forestl18/mihomo/component/tls"
+	"github.com/forestl18/mihomo/ntp"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/randv2"

@@ -4,9 +4,9 @@ import (
 	"net/netip"
 	"testing"
 
-	"github.com/metacubex/mihomo/adapter/outbound"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/listener/inbound"
+	"github.com/forestl18/mihomo/adapter/outbound"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/listener/inbound"
 
 	"github.com/stretchr/testify/assert"
 )

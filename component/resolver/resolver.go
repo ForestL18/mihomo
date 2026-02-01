@@ -7,8 +7,8 @@ import (
 	"net/netip"
 	"time"
 
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/component/trie"
+	"github.com/forestl18/mihomo/common/utils"
+	"github.com/forestl18/mihomo/component/trie"
 
 	"github.com/metacubex/randv2"
 	"github.com/miekg/dns"

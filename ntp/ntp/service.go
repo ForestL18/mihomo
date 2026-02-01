@@ -5,11 +5,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/component/dialer"
-	"github.com/metacubex/mihomo/component/proxydialer"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/log"
-	mihomoNtp "github.com/metacubex/mihomo/ntp"
+	"github.com/forestl18/mihomo/component/dialer"
+	"github.com/forestl18/mihomo/component/proxydialer"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/log"
+	mihomoNtp "github.com/forestl18/mihomo/ntp"
 
 	M "github.com/metacubex/sing/common/metadata"
 	"github.com/metacubex/sing/common/ntp"

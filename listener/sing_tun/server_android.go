@@ -6,10 +6,10 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/metacubex/mihomo/component/process"
-	"github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/constant/features"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/component/process"
+	"github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/constant/features"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/forestl18/sing-tun"
 )

@@ -1,4 +1,4 @@
-module github.com/metacubex/mihomo
+module github.com/forestl18/mihomo
 
 go 1.20
 

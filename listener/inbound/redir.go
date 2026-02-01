@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/listener/redir"
-	"github.com/metacubex/mihomo/log"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/listener/redir"
+	"github.com/forestl18/mihomo/log"
 )
 
 type RedirOption struct {

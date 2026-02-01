@@ -4,8 +4,8 @@ import (
 	"context"
 	"net"
 
-	"github.com/metacubex/mihomo/component/ca"
-	"github.com/metacubex/mihomo/ntp"
+	"github.com/forestl18/mihomo/component/ca"
+	"github.com/forestl18/mihomo/ntp"
 
 	tls "github.com/metacubex/restls-client-go"
 )
