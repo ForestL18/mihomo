@@ -4,9 +4,9 @@ import (
 	"context"
 	"net"
 
-	"github.com/metacubex/mihomo/component/ca"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/component/ca"
+	tlsC "github.com/forestl18/mihomo/component/tls"
+	"github.com/forestl18/mihomo/log"
 
 	"github.com/metacubex/sing-shadowtls"
 	"github.com/metacubex/tls"

@@ -6,12 +6,12 @@ import (
 	"net"
 	"strconv"
 
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/structure"
-	C "github.com/metacubex/mihomo/constant"
-	obfs "github.com/metacubex/mihomo/transport/simple-obfs"
-	shadowtls "github.com/metacubex/mihomo/transport/sing-shadowtls"
-	"github.com/metacubex/mihomo/transport/snell"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/common/structure"
+	C "github.com/forestl18/mihomo/constant"
+	obfs "github.com/forestl18/mihomo/transport/simple-obfs"
+	shadowtls "github.com/forestl18/mihomo/transport/sing-shadowtls"
+	"github.com/forestl18/mihomo/transport/snell"
 )
 
 type Snell struct {

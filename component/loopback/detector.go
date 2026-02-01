@@ -7,11 +7,11 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/metacubex/mihomo/common/callback"
-	"github.com/metacubex/mihomo/common/xsync"
-	"github.com/metacubex/mihomo/component/iface"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/constant/features"
+	"github.com/forestl18/mihomo/common/callback"
+	"github.com/forestl18/mihomo/common/xsync"
+	"github.com/forestl18/mihomo/component/iface"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/constant/features"
 )
 
 var disableLoopBackDetector, _ = strconv.ParseBool(os.Getenv("DISABLE_LOOPBACK_DETECTOR"))

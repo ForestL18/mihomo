@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/picker"
-	"github.com/metacubex/mihomo/component/ech/echparser"
-	"github.com/metacubex/mihomo/component/resolver"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/common/picker"
+	"github.com/forestl18/mihomo/component/ech/echparser"
+	"github.com/forestl18/mihomo/component/resolver"
+	"github.com/forestl18/mihomo/log"
 
 	D "github.com/miekg/dns"
 	"github.com/samber/lo"
