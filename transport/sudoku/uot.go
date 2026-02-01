@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/log"
 )
 
 const (

@@ -6,7 +6,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/transport/socks5"
 
 	"github.com/metacubex/jls-quic-go"
 )

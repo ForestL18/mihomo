@@ -13,11 +13,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/metacubex/mihomo/component/easytier"
-	"github.com/metacubex/mihomo/component/resolver"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/dns"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/component/easytier"
+	"github.com/forestl18/mihomo/component/resolver"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/dns"
+	"github.com/forestl18/mihomo/log"
 
 	corehost "github.com/easytier/easytier/easytier-go"
 	D "github.com/miekg/dns"

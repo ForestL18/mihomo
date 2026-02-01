@@ -1,6 +1,6 @@
 package config
 
-import "github.com/metacubex/mihomo/transport/mekya"
+import "github.com/forestl18/mihomo/transport/mekya"
 
 type MekyaConfig struct {
 	Enable                         bool       `yaml:"enable" json:"enable,omitempty"`

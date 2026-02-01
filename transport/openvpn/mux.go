@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"syscall"
 
-	"github.com/metacubex/mihomo/common/contextutils"
+	"github.com/forestl18/mihomo/common/contextutils"
 )
 
 type PacketMux struct {

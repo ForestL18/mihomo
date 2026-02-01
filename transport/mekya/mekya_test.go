@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/metacubex/mihomo/common/httputils"
-	"github.com/metacubex/mihomo/component/ca"
-	tlsC "github.com/metacubex/mihomo/component/tls"
-	"github.com/metacubex/mihomo/transport/mkcp"
+	"github.com/forestl18/mihomo/common/httputils"
+	"github.com/forestl18/mihomo/component/ca"
+	tlsC "github.com/forestl18/mihomo/component/tls"
+	"github.com/forestl18/mihomo/transport/mkcp"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/tls"

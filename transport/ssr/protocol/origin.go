@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"net"
 
-	N "github.com/metacubex/mihomo/common/net"
+	N "github.com/forestl18/mihomo/common/net"
 )
 
 type origin struct{}

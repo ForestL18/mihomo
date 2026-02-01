@@ -3,9 +3,9 @@ package config
 import (
 	"encoding/json"
 
-	"github.com/metacubex/mihomo/listener/reality"
-	"github.com/metacubex/mihomo/listener/sing"
-	"github.com/metacubex/mihomo/transport/tlsmirror"
+	"github.com/forestl18/mihomo/listener/reality"
+	"github.com/forestl18/mihomo/listener/sing"
+	"github.com/forestl18/mihomo/transport/tlsmirror"
 )
 
 type VmessUser struct {
