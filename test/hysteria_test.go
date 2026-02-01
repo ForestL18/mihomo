@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/docker/docker/api/types/container"
-	"github.com/metacubex/mihomo/adapter/outbound"
-	C "github.com/metacubex/mihomo/constant"
+	"github.com/forestl18/mihomo/adapter/outbound"
+	C "github.com/forestl18/mihomo/constant"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/metacubex/mihomo/transport/shadowsocks/shadowaead"
+	"github.com/forestl18/mihomo/transport/shadowsocks/shadowaead"
 )
 
 // Snell v6 keeps the v4 record layout (7-byte header sealed with AES-128-GCM,

@@ -5,8 +5,8 @@ import (
 	"net/netip"
 	"testing"
 
-	"github.com/metacubex/mihomo/adapter/outbound"
-	"github.com/metacubex/mihomo/listener/inbound"
+	"github.com/forestl18/mihomo/adapter/outbound"
+	"github.com/forestl18/mihomo/listener/inbound"
 
 	"github.com/stretchr/testify/assert"
 )

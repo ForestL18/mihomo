@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"github.com/metacubex/http"
 	"github.com/metacubex/http/httputil"
-	"github.com/metacubex/mihomo/common/pool"
+	"github.com/forestl18/mihomo/common/pool"
 	"io"
 	"net"
 	"net/url"

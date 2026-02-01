@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/pool"
-	sudokuobfs "github.com/metacubex/mihomo/transport/sudoku/obfs/sudoku"
+	"github.com/forestl18/mihomo/common/pool"
+	sudokuobfs "github.com/forestl18/mihomo/transport/sudoku/obfs/sudoku"
 )
 
 const (

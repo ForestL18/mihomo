@@ -5,10 +5,10 @@ import (
 	"net"
 	"strings"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	N "github.com/metacubex/mihomo/common/net"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	N "github.com/forestl18/mihomo/common/net"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/transport/socks5"
 
 	"github.com/metacubex/http"
 	"github.com/metacubex/tls"

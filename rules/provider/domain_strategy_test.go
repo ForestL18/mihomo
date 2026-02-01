@@ -3,8 +3,8 @@ package provider_test
 import (
 	"testing"
 
-	"github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/rules/provider"
+	"github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/rules/provider"
 	"github.com/stretchr/testify/assert"
 )
 

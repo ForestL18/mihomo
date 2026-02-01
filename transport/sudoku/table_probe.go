@@ -10,9 +10,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/metacubex/mihomo/common/pool"
-	"github.com/metacubex/mihomo/transport/sudoku/crypto"
-	"github.com/metacubex/mihomo/transport/sudoku/obfs/sudoku"
+	"github.com/forestl18/mihomo/common/pool"
+	"github.com/forestl18/mihomo/transport/sudoku/crypto"
+	"github.com/forestl18/mihomo/transport/sudoku/obfs/sudoku"
 )
 
 type clientTableChoice struct {

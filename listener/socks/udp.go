@@ -4,13 +4,13 @@ import (
 	"context"
 	"net"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/sockopt"
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/log"
-	"github.com/metacubex/mihomo/transport/socks5"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/common/sockopt"
+	C "github.com/forestl18/mihomo/constant"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/log"
+	"github.com/forestl18/mihomo/transport/socks5"
 )
 
 type UDPListener struct {

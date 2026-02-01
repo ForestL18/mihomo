@@ -13,7 +13,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/log"
 )
 
 type hashReadConn struct {

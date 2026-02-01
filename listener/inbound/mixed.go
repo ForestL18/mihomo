@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"strings"
 
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/mixed"
-	"github.com/metacubex/mihomo/listener/socks"
-	"github.com/metacubex/mihomo/log"
+	C "github.com/forestl18/mihomo/constant"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/listener/mixed"
+	"github.com/forestl18/mihomo/listener/socks"
+	"github.com/forestl18/mihomo/log"
 )
 
 type MixedOption struct {

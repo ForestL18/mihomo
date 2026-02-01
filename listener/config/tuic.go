@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/metacubex/mihomo/listener/sing"
+	"github.com/forestl18/mihomo/listener/sing"
 
 	"encoding/json"
 )

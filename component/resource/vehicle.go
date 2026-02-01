@@ -8,10 +8,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/metacubex/mihomo/common/utils"
-	mihomoHttp "github.com/metacubex/mihomo/component/http"
-	"github.com/metacubex/mihomo/component/profile/cachefile"
-	P "github.com/metacubex/mihomo/constant/provider"
+	"github.com/forestl18/mihomo/common/utils"
+	mihomoHttp "github.com/forestl18/mihomo/component/http"
+	"github.com/forestl18/mihomo/component/profile/cachefile"
+	P "github.com/forestl18/mihomo/constant/provider"
 
 	"github.com/metacubex/http"
 )

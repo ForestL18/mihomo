@@ -8,7 +8,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/metacubex/mihomo/common/pool"
+	"github.com/forestl18/mihomo/common/pool"
 )
 
 // connIO deliberately excludes net.Conn's deadline methods. Physical OpenVPN

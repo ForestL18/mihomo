@@ -6,8 +6,8 @@ import (
 	"io"
 	"io/fs"
 
-	"github.com/metacubex/mihomo/component/resource"
-	C "github.com/metacubex/mihomo/constant"
+	"github.com/forestl18/mihomo/component/resource"
+	C "github.com/forestl18/mihomo/constant"
 
 	"github.com/metacubex/sevenzip"
 )

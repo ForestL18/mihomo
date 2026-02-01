@@ -6,12 +6,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/metacubex/mihomo/common/utils"
-	"github.com/metacubex/mihomo/component/ca"
-	C "github.com/metacubex/mihomo/constant"
-	"github.com/metacubex/mihomo/ntp"
-	"github.com/metacubex/mihomo/transport/shadowquic"
-	"github.com/metacubex/mihomo/transport/tuic"
+	"github.com/forestl18/mihomo/common/utils"
+	"github.com/forestl18/mihomo/component/ca"
+	C "github.com/forestl18/mihomo/constant"
+	"github.com/forestl18/mihomo/ntp"
+	"github.com/forestl18/mihomo/transport/shadowquic"
+	"github.com/forestl18/mihomo/transport/tuic"
 
 	"github.com/metacubex/jls-quic-go"
 	"github.com/metacubex/jls-tls"

@@ -3,11 +3,11 @@ package inbound
 import (
 	"strings"
 
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/shadowquic"
-	"github.com/metacubex/mihomo/log"
+	"github.com/forestl18/mihomo/common/utils"
+	C "github.com/forestl18/mihomo/constant"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/listener/shadowquic"
+	"github.com/forestl18/mihomo/log"
 )
 
 type ShadowQuicOption struct {

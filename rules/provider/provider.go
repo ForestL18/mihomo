@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metacubex/mihomo/common/pool"
-	"github.com/metacubex/mihomo/common/yaml"
-	"github.com/metacubex/mihomo/component/resource"
-	C "github.com/metacubex/mihomo/constant"
-	P "github.com/metacubex/mihomo/constant/provider"
-	"github.com/metacubex/mihomo/rules/common"
+	"github.com/forestl18/mihomo/common/pool"
+	"github.com/forestl18/mihomo/common/yaml"
+	"github.com/forestl18/mihomo/component/resource"
+	C "github.com/forestl18/mihomo/constant"
+	P "github.com/forestl18/mihomo/constant/provider"
+	"github.com/forestl18/mihomo/rules/common"
 )
 
 var tunnel P.Tunnel

@@ -12,17 +12,17 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/metacubex/mihomo/adapter/inbound"
-	N "github.com/metacubex/mihomo/common/net"
-	"github.com/metacubex/mihomo/common/utils"
-	C "github.com/metacubex/mihomo/constant"
-	LC "github.com/metacubex/mihomo/listener/config"
-	"github.com/metacubex/mihomo/listener/jls"
-	"github.com/metacubex/mihomo/listener/restls"
-	"github.com/metacubex/mihomo/listener/shadowtls"
-	"github.com/metacubex/mihomo/transport/shadowsocks/shadowaead"
-	obfs "github.com/metacubex/mihomo/transport/simple-obfs"
-	"github.com/metacubex/mihomo/transport/snell"
+	"github.com/forestl18/mihomo/adapter/inbound"
+	N "github.com/forestl18/mihomo/common/net"
+	"github.com/forestl18/mihomo/common/utils"
+	C "github.com/forestl18/mihomo/constant"
+	LC "github.com/forestl18/mihomo/listener/config"
+	"github.com/forestl18/mihomo/listener/jls"
+	"github.com/forestl18/mihomo/listener/restls"
+	"github.com/forestl18/mihomo/listener/shadowtls"
+	"github.com/forestl18/mihomo/transport/shadowsocks/shadowaead"
+	obfs "github.com/forestl18/mihomo/transport/simple-obfs"
+	"github.com/forestl18/mihomo/transport/snell"
 )
 
 const maxPacketLength = 0x3fff
