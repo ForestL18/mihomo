@@ -68,6 +68,8 @@ var (
 	sniffingEnable    = false
 
 	ruleUpdateCallback = utils.NewCallback[P.RuleProvider]()
+
+	blockQuic = atomic.NewInt32Enum(C.BlockQuicModeAlwaysAllow)
 )
 
 type tunnel struct{}
@@ -272,6 +274,14 @@ func FindProcessMode() process.FindProcessMode {
 // always find process info if legacyAlways = true or mode.Always() = true, may be increase many memory
 func SetFindProcessMode(mode process.FindProcessMode) {
 	findProcessMode.Store(mode)
+}
+
+func BlockQuic() C.BlockQuicMode {
+	return blockQuic.Load()
+}
+
+func SetBlockQuic(m C.BlockQuicMode) {
+	blockQuic.Store(m)
 }
 
 func isHandle(t C.Type) bool {
@@ -662,6 +672,21 @@ func match(metadata *C.Metadata, helper C.RuleMatchHelper) (C.Proxy, C.Rule, err
 	configMux.RLock()
 	defer configMux.RUnlock()
 
+	isUDP443 := metadata.NetWork == C.UDP && metadata.DstPort == 443
+
+	// BlockQuicModeAlwaysAllow is the default mode, which means QUIC is allowed.
+	blockQuicMode := C.BlockQuicModeAlwaysAllow
+
+	// BlockQuicModeAll means all QUIC traffic is blocked, regardless of the proxy.
+	if isUDP443 {
+		blockQuicMode = BlockQuic()
+
+		if blockQuicMode == C.BlockQuicModeAll {
+			log.Debugln("blocking all QUIC (UDP 443) using REJECT")
+			return proxies["REJECT"], nil, nil
+		}
+	}
+
 	var rematchChain []string
 	for {
 		var rematchProxy C.Proxy
@@ -675,7 +700,9 @@ func match(metadata *C.Metadata, helper C.RuleMatchHelper) (C.Proxy, C.Rule, err
 				}
 
 				// parse multi-layer nesting
+				blockAdapter := adapter
 				for adapter := adapter; adapter != nil; adapter = adapter.Unwrap(metadata, false) {
+					blockAdapter = adapter
 					if adapter.Type() == C.Pass {
 						log.Debugln("%s match Pass rule", adapter.Name())
 						continue GetRules
@@ -686,6 +713,15 @@ func match(metadata *C.Metadata, helper C.RuleMatchHelper) (C.Proxy, C.Rule, err
 						rematchRule = rule
 						break GetRules
 					}
+				}
+
+				// BlockQuicModeAllProxy means QUIC traffic is blocked only when the proxy is not DIRECT.
+				if isUDP443 &&
+					blockQuicMode == C.BlockQuicModeAllProxy &&
+					blockAdapter.Type() != C.Direct {
+
+					log.Debugln("blocking proxy QUIC (UDP 443) for %s, using REJECT instead", adapter.Name())
+					return proxies["REJECT"], rule, nil
 				}
 
 				if metadata.NetWork == C.UDP && !adapter.SupportUDP() {
