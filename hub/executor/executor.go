@@ -165,19 +165,20 @@ func GetGeneral() *config.General {
 			ASN:     geodata.ASNUrl(),
 			GeoSite: geodata.GeoSiteUrl(),
 		},
-		GeoAutoUpdate:     updater.GeoAutoUpdate(),
-		GeoUpdateInterval: updater.GeoUpdateInterval(),
-		GeodataMode:       geodata.GeodataMode(),
-		GeodataLoader:     geodata.LoaderName(),
-		GeositeMatcher:    geodata.SiteMatcherName(),
-		TCPConcurrent:     dialer.GetTcpConcurrent(),
-		FindProcessMode:   tunnel.FindProcessMode(),
-		Sniffing:          tunnel.IsSniffing(),
-		GlobalUA:          mihomoHttp.UA(),
-		ETagSupport:       resource.ETag(),
-		KeepAliveInterval: int(keepalive.KeepAliveInterval() / time.Second),
-		KeepAliveIdle:     int(keepalive.KeepAliveIdle() / time.Second),
-		DisableKeepAlive:  keepalive.DisableKeepAlive(),
+		GeoAutoUpdate:           updater.GeoAutoUpdate(),
+		GeoUpdateInterval:       updater.GeoUpdateInterval(),
+		GeodataMode:             geodata.GeodataMode(),
+		GeodataLoader:           geodata.LoaderName(),
+		GeositeMatcher:          geodata.SiteMatcherName(),
+		TCPConcurrent:           dialer.GetTcpConcurrent(),
+		FindProcessMode:         tunnel.FindProcessMode(),
+		BlockQuic:               tunnel.BlockQuic(),
+		Sniffing:                tunnel.IsSniffing(),
+		GlobalUA:                mihomoHttp.UA(),
+		ETagSupport:             resource.ETag(),
+		KeepAliveInterval:       int(keepalive.KeepAliveInterval() / time.Second),
+		KeepAliveIdle:           int(keepalive.KeepAliveIdle() / time.Second),
+		DisableKeepAlive:        keepalive.DisableKeepAlive(),
 	}
 
 	return general
@@ -390,6 +391,7 @@ func temporaryUpdateGeneral(general *config.General) func() {
 func updateGeneral(general *config.General, logging bool) {
 	tunnel.SetMode(general.Mode)
 	tunnel.SetFindProcessMode(general.FindProcessMode)
+	tunnel.SetBlockQuic(general.BlockQuic)
 	resolver.DisableIPv6 = !general.IPv6
 
 	dialer.SetTcpConcurrent(general.TCPConcurrent)
