@@ -56,6 +56,7 @@ type configSchema struct {
 	Sniffing          *bool                    `json:"sniffing"`
 	TcpConcurrent     *bool                    `json:"tcp-concurrent"`
 	FindProcessMode   *process.FindProcessMode `json:"find-process-mode"`
+	BlockQuic         *C.BlockQuicMode         `json:"block-quic"`
 	InterfaceName     *string                  `json:"interface-name"`
 }
 
@@ -375,6 +376,10 @@ func patchConfigs(w http.ResponseWriter, r *http.Request) {
 
 	if general.FindProcessMode != nil {
 		tunnel.SetFindProcessMode(*general.FindProcessMode)
+	}
+
+	if general.BlockQuic != nil {
+		tunnel.SetBlockQuic(*general.BlockQuic)
 	}
 
 	if general.LogLevel != nil {

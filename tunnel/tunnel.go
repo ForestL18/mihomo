@@ -68,6 +68,8 @@ var (
 	sniffingEnable    = false
 
 	ruleUpdateCallback = utils.NewCallback[P.RuleProvider]()
+
+	blockQuic = atomic.NewInt32Enum(C.BlockQuicModeAlwaysAllow)
 )
 
 type tunnel struct{}
@@ -265,6 +267,14 @@ func FindProcessMode() process.FindProcessMode {
 // always find process info if legacyAlways = true or mode.Always() = true, may be increase many memory
 func SetFindProcessMode(mode process.FindProcessMode) {
 	findProcessMode.Store(mode)
+}
+
+func BlockQuic() C.BlockQuicMode {
+	return blockQuic.Load()
+}
+
+func SetBlockQuic(m C.BlockQuicMode) {
+	blockQuic.Store(m)
 }
 
 func isHandle(t C.Type) bool {
@@ -668,7 +678,9 @@ func match(metadata *C.Metadata, helper C.RuleMatchHelper) (C.Proxy, C.Rule, err
 				}
 
 				// parse multi-layer nesting
+				blockAdapter := adapter
 				for adapter := adapter; adapter != nil; adapter = adapter.Unwrap(metadata, false) {
+					blockAdapter = adapter
 					if adapter.Type() == C.Pass {
 						log.Debugln("%s match Pass rule", adapter.Name())
 						continue GetRules
@@ -685,6 +697,23 @@ func match(metadata *C.Metadata, helper C.RuleMatchHelper) (C.Proxy, C.Rule, err
 					log.Debugln("%s UDP is not supported", adapter.Name())
 					continue
 				}
+
+			    // Block QUIC (UDP 443) handling
+			    if metadata.NetWork == C.UDP && metadata.DstPort == 443 {
+			    	blockQuicMode := BlockQuic()
+			    	switch blockQuicMode {
+			    	case C.BlockQuicModeAll:
+			    		log.Debugln("blocking all QUIC (UDP 443) using REJECT")
+			    		return proxies["REJECT"], rule, nil
+			    	case C.BlockQuicModeAllProxy:
+			    		if blockAdapter.Type() != C.Direct {
+			    			log.Debugln("blocking proxy QUIC (UDP 443) for %s, using REJECT instead", adapter.Name())
+			    			return proxies["REJECT"], rule, nil
+			    		}
+			    	case C.BlockQuicModeAlwaysAllow:
+			    		// do nothing, allow QUIC
+			    	}
+			    }
 
 				return adapter, rule, nil
 			}
