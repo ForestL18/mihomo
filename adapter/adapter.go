@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net"
 	"net/url"
+	"slices"
 	"strings"
 	"time"
 
@@ -226,6 +227,10 @@ func (p *Proxy) URLTest(ctx context.Context, url string, expectedStatus utils.In
 		return
 	}
 
+	if !slices.Contains(tlsConfig.NextProtos, "h2") {
+		tlsConfig.NextProtos = append([]string{"h2", "http/1.1"}, tlsConfig.NextProtos...)
+	}
+
 	transport := &http.Transport{
 		DialContext: func(context.Context, string, string) (net.Conn, error) {
 			return instance, nil
@@ -236,6 +241,7 @@ func (p *Proxy) URLTest(ctx context.Context, url string, expectedStatus utils.In
 		TLSHandshakeTimeout:   10 * time.Second,
 		ExpectContinueTimeout: 1 * time.Second,
 		TLSClientConfig:       tlsConfig,
+		ForceAttemptHTTP2:     true,
 	}
 
 	client := http.Client{
