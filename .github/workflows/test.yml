@@ -7,8 +7,8 @@ on:
       - ".github/ISSUE_TEMPLATE/**"
     branches:
       - Alpha
-    tags:
-      - "v*"
+    #tags:
+    #  - "v*"
   pull_request:
     branches:
       - Alpha
