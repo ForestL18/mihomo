@@ -12,8 +12,8 @@ on:
       - ".github/ISSUE_TEMPLATE/**"
     branches:
       - beta
-    tags:
-      - "v*"
+    #tags:
+    #  - "v*"
   pull_request:
     branches:
       - beta
