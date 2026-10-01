@@ -8,8 +8,8 @@ on:
       - ".github/ISSUE_TEMPLATE/**"
     branches:
       - Alpha
-    tags:
-      - "v*"
+    #tags:
+    #  - "v*"
 
 jobs:
   # Send "core-updated" to ForestL18/ClashMetaForAndroid to trigger update-dependencies
