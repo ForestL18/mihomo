@@ -41,6 +41,8 @@ func (c *client) ExchangeContext(ctx context.Context, m *D.Msg) (*D.Msg, error) 
 	}
 	defer conn.Close()
 
+	log.Debugln("[DNS-OUT] id=%d local=%s remote=%s", m.Id, conn.LocalAddr(), conn.RemoteAddr())
+
 	// miekg/dns ExchangeContext doesn't respond to context cancel.
 	// this is a workaround
 	type result struct {
